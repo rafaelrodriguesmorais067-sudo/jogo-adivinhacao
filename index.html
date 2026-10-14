@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>🎯 Jogo de Adivinhação</h1>
+        <p>Descubra o número secreto!</p>
+
+        <h2>Escolha a dificuldade</h2>
+
+        <div class="dificuldades">
+            <button onclick="iniciarJogo(50)">Fácil (1 a 50)</button>
+            <button onclick="iniciarJogo(100)">Médio (1 a 100)</button>
+            <button onclick="iniciarJogo(500)">Difícil (1 a 500)</button>
+        </div>
+
+        <p id="mensagem">Escolha uma dificuldade para começar.</p>
+
+        <label for="palpite">Digite seu número:</label>
+        <input type="number" id="palpite" placeholder="Seu palpite" min="1">
+
+        <button onclick="verificarPalpite()">Verificar palpite</button>
+
+        <p id="resultado"></p>
+        <p id="tentativas">Tentativas: 0</p>
+
+        <button onclick="reiniciarJogo()">Novo jogo</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
